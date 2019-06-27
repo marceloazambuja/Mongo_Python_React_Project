@@ -423,7 +423,7 @@ def add_user(name, email, hashedpw):
             "name": name,
             "email": email,
             "password": hashedpw
-            })
+            }, {writeConcern: {w : "majority"}})
             return {"success": True}
         else:
             return {"error": "A user with the given email already exists."}
