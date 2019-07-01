@@ -48,6 +48,7 @@ def get_db():
         # Set the maximum connection pool size to 50 active connections.
         # TODO: Timeouts
         # Set the write timeout limit to 2500 milliseconds.
+        maxPoolSize=50
         )["mflix"]
     return db
 
